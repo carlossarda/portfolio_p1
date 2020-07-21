@@ -1,31 +1,35 @@
 <template>
-    <div>
-        <ul>
-            <li>Home</li>
-            <li><a href='https://api.whatsapp.com/send?phone=5548984391730&text=oi' target="blank">Contato</a></li>
-        </ul>
+    <div class="cabecalho">
+        <img :src="header">
     </div>
+    
 </template>
 
 <script>
 export default {
-    
+    data: () => {
+        return {
+            header: require('../assets/logo-sem-fundo-preto.png')
+        }
+    }
 }
 </script>
 
 <style scoped>
-    ul {
-        list-style: none;
-        display: flex;
-        justify-content: space-evenly;
+    img {
+        height: 20vh;
+        width: 100%;
     }
 
-    div {
-        height: 60px;
-    }
-    a, a:link, a:visited, a:active {
-        text-decoration: none;
-        color: inherit;
-        
+    @media screen and (min-width: 720px){
+        img {
+            height: 20 vh;
+            width: 30vw;
+        }
+        .cabecalho {
+            display: flex;
+            align-content: center;
+            justify-content: end;
+        }
     }
 </style>

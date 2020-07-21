@@ -1,11 +1,13 @@
 <template>
   <div id="app" class="fundo">
+      <Header />
       <Carousel :slides="slides" @alterarSite="alterarSite" />
       <Galeria :slide="slides[index] "/>
   </div>
 </template>
 
 <script>
+import Header from "./components/Header";
 import Carousel from "./components/Carousel";
 import Galeria from "./components/Galeria";
 
@@ -13,7 +15,8 @@ export default {
   name: "App",
   components: {
     Carousel,
-    Galeria
+    Galeria,
+    Header
   },
   data() {
     return {

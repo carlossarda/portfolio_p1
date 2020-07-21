@@ -2,11 +2,10 @@
   <carousel-3d
     :height="250"
     :width="400"
-    :autoplay="true"
+    :autoplay=autoplay
     :autoplay-timeout="15000"
     :controlsVisible="true"
     @after-slide-change="onAfterSlideChange"
-    @before-slide-change="onBeforeSlideChange"
     @last-slide="onLastSlide"
   >
     <slide v-for="(slide, i) in slides" :key="i" :index="i">
@@ -27,16 +26,13 @@ export default {
     onAfterSlideChange(index) {
       this.$emit('alterarSite',index);
     },
-    onBeforeSlideChange(index) {
-      console.log('@onBeforeSlideChange Callback Triggered', 'Slide Index ' + index)
-    },
-    onLastSlide(index) {
-      console.log('@onLastSlide Callback Triggered', 'Slide Index ' + index)
+    onLastSlide() {
+      this.autoplay = false
     }
   },
   data() {
     return {
-      
+      autoplay: true
     }
   },
   props: {
