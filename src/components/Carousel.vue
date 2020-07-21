@@ -1,5 +1,14 @@
 <template>
-  <carousel-3d :height="250" :width="400" @after-slide-change="onAfterSlideChange" @before-slide-change="onBeforeSlideChange" @last-slide="onLastSlide">
+  <carousel-3d
+    :height="250"
+    :width="400"
+    :autoplay="true"
+    :autoplay-timeout="5000"
+    :controlsVisible="true"
+    @after-slide-change="onAfterSlideChange"
+    @before-slide-change="onBeforeSlideChange"
+    @last-slide="onLastSlide"
+  >
     <slide v-for="(slide, i) in slides" :key="i" :index="i">
       <img :src="slide.mainImg"/>
     </slide>
