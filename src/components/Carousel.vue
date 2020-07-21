@@ -3,7 +3,7 @@
     :height="250"
     :width="400"
     :autoplay="true"
-    :autoplay-timeout="5000"
+    :autoplay-timeout="15000"
     :controlsVisible="true"
     @after-slide-change="onAfterSlideChange"
     @before-slide-change="onBeforeSlideChange"
