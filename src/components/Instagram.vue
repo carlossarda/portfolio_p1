@@ -25,24 +25,21 @@ export default {
 <style scoped>
 .float{
     position:fixed;
-    bottom:40px;
-    right:110px;
+    bottom:0.8em;
+    right:5em;
     z-index:100;
 }
-.my-float{
-    margin-top:16px;
-}
+
 .instagram {
     display: inline-block;
-    width: 60px;
-    height: 60px;
+    width: 2em;
+    height: 2em;
     text-align: center;
     border-radius: 40px;
     color: #fff;
-    font-size: 30px;
-    line-height: 60px;
+    font-size: 1.8em;
+    line-height: 2em;
     vertical-align: middle;
-    background: #d6249f;
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
     box-shadow: 0px 3px 10px rgba(0,0,0,.25);
 }

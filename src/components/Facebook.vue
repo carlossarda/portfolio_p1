@@ -2,7 +2,7 @@
     <div>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <a :href="link" class="float" target="_blank">
-            <span class="instagram">
+            <span class="facebook">
               <span class="fa fa-facebook"></span>
             </span>
         </a>
@@ -25,22 +25,20 @@ export default {
 <style scoped>
 .float{
     position:fixed;
-    bottom:40px;
-    right:180px;
+    bottom:0.8em;
+    right:9em;
     z-index:100;
 }
-.my-float{
-    margin-top:16px;
-}
-.instagram {
+
+.facebook {
     display: inline-block;
-    width: 60px;
-    height: 60px;
+    width: 2em;
+    height: 2em;
     text-align: center;
     border-radius: 40px;
     color: #fff;
-    font-size: 30px;
-    line-height: 60px;
+    font-size: 1.8em;
+    line-height: 2em;
     vertical-align: middle;
     background: #385898;
     background: radial-gradient(circle at 30% 107%, #385898 0%, #385898 5%, #385898 45%,#385898 60%,#385898 95%);

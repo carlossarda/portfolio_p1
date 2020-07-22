@@ -36,15 +36,15 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #000;
 }
 
 .link, .link:active {
   padding: 10px;
-  color: #2c3e50;
+  color: #000;
   font-size: 1.2em;
   text-decoration: none;
-  font-family: 'Lobster';
+  font-family: url('/assets/AdamLight.ttf');
 }
 
 .menu {
@@ -53,6 +53,7 @@ export default {
   align-items: center;
   margin: 12px;
   margin-top: 0;
+  width: 100%;
 }
 
 #nav {

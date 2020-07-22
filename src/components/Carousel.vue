@@ -65,7 +65,7 @@ export default {
 
 @media screen and (min-width: 720px){
   .carousel-3d-container {
-    width: 65vw;
+    width: 55vw;
   }
 }
 

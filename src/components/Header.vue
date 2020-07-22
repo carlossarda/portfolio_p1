@@ -14,14 +14,14 @@ export default {
 
 <style scoped>
     img {
-        height: 20vh;
-        width: 100%;
+        height: 160px;
+        width: 370px;
     }
 
     @media screen and (min-width: 720px){
         img {
-            height: 20vh;
-            width: 35vw;
+            height: 160px;
+            width: 350px;
         }
     }
 </style>

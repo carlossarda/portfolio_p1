@@ -21,7 +21,7 @@ export default {
 
 <style scoped>
 .descricao-perfil {
-    font-family: 'Lobster';
+    font-family: url('/assets/AdamLight.ttf');
     font-size: 1.2em;
     
 }
