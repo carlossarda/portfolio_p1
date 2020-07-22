@@ -54,7 +54,7 @@ export default {
 }
 
 .fundo {
-  background-image: url('./assets/grit.png');
+  background-color: white;
   height: 100vh;
 }
 @media screen and (min-width: 720px){
@@ -62,7 +62,7 @@ export default {
     display: flex;
   }
   .link, .link:active {
-  font-size: 1.8em;
-}
+    font-size: 1.8em;
+  }
 }
 </style>
