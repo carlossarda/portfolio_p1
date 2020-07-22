@@ -1,125 +1,25 @@
 <template>
   <div id="app" class="fundo">
+    <div id="nav">
       <Header />
-      <Carousel :slides="slides" @alterarSite="alterarSite" />
-      <Galeria :slide="slides[index] "/>
+      <div class="menu">
+        <router-link class="link" to="/">Inicio</router-link>
+        <router-link class="link" to="/projetos">Projetos</router-link>
+        <router-link class="link" to="/clientes">Clientes</router-link>
+        <router-link class="link" to="/contato">Contato</router-link>
+      </div>
+    </div>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import Header from "./components/Header";
-import Carousel from "./components/Carousel";
-import Galeria from "./components/Galeria";
-
+import Header from './components/Header';
 export default {
-  name: "App",
   components: {
-    Carousel,
-    Galeria,
     Header
-  },
-  data() {
-    return {
-      slides: [
-        {
-          titulo: "Sacada Gourmet",
-          mensagem: "Florianópolis - SC 3,0m²",
-          mainImg: require('./assets/projeto_01/cena-02.png'),
-          imagens: [
-            {
-              endereco: require('./assets/projeto_01/cena-02.png')
-            },
-            {
-              endereco: require('./assets/projeto_01/cena-03.png')
-            },
-            {
-              endereco: require('./assets/projeto_01/cena-04.png')
-            }
-          ]
-        },
-        {
-          titulo: "Suíte Casal MC",
-          mensagem: "Palhoça - SC 12,0m²",
-          mainImg: require('./assets/projeto_02/suite-00.png'),
-          imagens: [
-            {
-              endereco: require('./assets/projeto_02/suite-00.png')
-            },
-            {
-              endereco: require('./assets/projeto_02/suite-01.png')
-            },
-            {
-              endereco: require('./assets/projeto_02/suite-02.png')
-            },
-            {
-              endereco: require('./assets/projeto_02/suite-03.png')
-            },
-            {
-              endereco: require('./assets/projeto_02/suite-04.png')
-            }
-          ]
-        },
-        {
-          titulo: "Living NR",
-          mensagem: "Bela Vista - SC 10,0m²",
-          mainImg: require('./assets/projeto_03/cena-01.png'),
-          imagens: [
-            {
-              endereco: require('./assets/projeto_03/cena-01.png')
-            },
-            {
-              endereco: require('./assets/projeto_03/cena-02.png')
-            },
-            {
-              endereco: require('./assets/projeto_03/cena-04.png')
-            },
-            {
-              endereco: require('./assets/projeto_03/cena-06.png')
-            },
-            {
-              endereco: require('./assets/projeto_03/cena-07.png')
-            }
-          ]
-        },
-        {
-          titulo: "Suíte NR",
-          mensagem: "Bela Vista - SC 10,0m²",
-          mainImg: require('./assets/projeto_04/imagem-01.png'),
-          imagens: [
-            {
-              endereco: require('./assets/projeto_04/imagem-01.png')
-            },
-            {
-              endereco: require('./assets/projeto_04/imagem-02.png')
-            },
-            {
-              endereco: require('./assets/projeto_04/imagem-03.png')
-            },
-            {
-              endereco: require('./assets/projeto_04/imagem-04.png')
-            },
-            {
-              endereco: require('./assets/projeto_04/imagem-05.png')
-            },
-            {
-              endereco: require('./assets/projeto_04/imagem-06.png')
-            },
-            {
-              endereco: require('./assets/projeto_04/imagem-07.png')
-            }
-          ]
-        }
-      ],
-      index:0
-      
-    };
-  },
-  methods: {
-    alterarSite(index){
-      this.index = index;
-    }
   }
-};
+}
 </script>
 
 <style>
@@ -130,21 +30,39 @@ export default {
   list-style:none;
   border:0
 }
-#app {
-  margin: 0;
-  padding: 10px;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  color: #2c3e50;
 
-  height: auto;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.link, .link:active {
+  padding: 10px;
+  color: #2c3e50;
+  font-size: 1.6em;
+  text-decoration: none;
+  font-family: 'Lobster';
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .fundo {
   background-image: url('./assets/grit.png');
-  
+  height: 100vh;
 }
-
 @media screen and (min-width: 720px){
-  
+  #nav {
+    display: flex;
+  }
+  .link, .link:active {
+  font-size: 1.8em;
+}
 }
 </style>

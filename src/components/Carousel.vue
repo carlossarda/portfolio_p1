@@ -1,9 +1,10 @@
 <template>
   <carousel-3d
-    :height="250"
-    :width="400"
-    :autoplay=autoplay
-    :autoplay-timeout="15000"
+    :height= "250"
+    :width= "400"
+    :autoplay= autoplay
+    :autoplay-timeout= "15000"
+    :display= 3
     :controlsVisible="true"
     @after-slide-change="onAfterSlideChange"
     @last-slide="onLastSlide"
@@ -41,15 +42,22 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .carousel-3d-container {
-  
-  .carousel-3d-slide {
-    border-radius: 10px;
-    img {
-      width: 100%;
-      height: 100%;
-    }
+  width: 100%;
+}
+.carousel-3d-slide {
+  border-radius: 10px;
+}
+.carousel-3d-slide  img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 720px){
+  .carousel-3d-container {
+    width: 65vw;
   }
 }
+
 </style>
