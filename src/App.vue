@@ -42,20 +42,27 @@ export default {
 .link, .link:active {
   padding: 10px;
   color: #2c3e50;
-  font-size: 1.6em;
+  font-size: 1.2em;
   text-decoration: none;
   font-family: 'Lobster';
 }
 
 .menu {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12px;
+  margin-top: 0;
+}
+
+#nav {
+  width: 100%;
   justify-content: space-between;
   align-items: center;
 }
 
 .fundo {
   background-color: white;
-  height: 100vh;
 }
 @media screen and (min-width: 720px){
   #nav {

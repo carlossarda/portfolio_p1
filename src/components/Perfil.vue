@@ -22,7 +22,7 @@ export default {
 <style scoped>
 .descricao-perfil {
     font-family: 'Lobster';
-    font-size: 1.3em;
+    font-size: 1.2em;
     
 }
 .descricao-perfil p {

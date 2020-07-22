@@ -20,7 +20,7 @@ export default {
 
     @media screen and (min-width: 720px){
         img {
-            height: 20 vh;
+            height: 20vh;
             width: 35vw;
         }
     }
