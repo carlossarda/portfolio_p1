@@ -3,7 +3,9 @@
     <Perfil />
     <Carousel :slides="slides" @alterarSite="alterarSite" />
     <!-- <Galeria :slide="slides[index] "/> -->
-    <Whats />
+    <Facebook perfil="studiohallarq" />
+    <Instagram perfil="studiohallarq" />
+    <Whats :telefone="5548996869837" />
   </div>
 </template>
 
@@ -13,6 +15,8 @@ import Carousel from "@/components/Carousel";
 // import Galeria from "@/components/Galeria";
 import Whats from "@/components/Whats";
 import Perfil from "@/components/Perfil";
+import Instagram from "@/components/Instagram";
+import Facebook from "@/components/Facebook";
 
 export default {
   name: 'Home',
@@ -20,6 +24,8 @@ export default {
     Carousel,
     // Galeria
     Whats,
+    Instagram,
+    Facebook,
     Perfil
   },
   data() {
