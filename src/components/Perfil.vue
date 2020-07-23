@@ -21,9 +21,9 @@ export default {
 
 <style scoped>
 .descricao-perfil {
-    font-family: url('/assets/AdamLight.ttf');
+    font-family: 'Raleway';
     font-size: 1.2em;
-    
+    font-weight: bold;
 }
 .descricao-perfil p {
     padding: 3px;

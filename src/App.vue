@@ -1,23 +1,20 @@
 <template>
   <div id="app" class="fundo">
-    <div id="nav">
-      <Header />
-      <div class="menu">
-        <router-link class="link" to="/">Inicio</router-link>
-        <router-link class="link" to="/projetos">Projetos</router-link>
-        <router-link class="link" to="/clientes">Clientes</router-link>
-        <router-link class="link" to="/contato">Contato</router-link>
-      </div>
-    </div>
-    <router-view/>
+    <Header />
+    <router-view />
+    <RedesSociais />
   </div>
 </template>
 
 <script>
 import Header from './components/Header';
+import RedesSociais from './components/RedesSociais';
+
+
 export default {
   components: {
-    Header
+    Header,
+    RedesSociais
   }
 }
 </script>
@@ -30,7 +27,6 @@ export default {
   list-style:none;
   border:0
 }
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -38,39 +34,7 @@ export default {
   text-align: center;
   color: #000;
 }
-
-.link, .link:active {
-  padding: 10px;
-  color: #000;
-  font-size: 1.2em;
-  text-decoration: none;
-  font-family: url('/assets/AdamLight.ttf');
-}
-
-.menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 12px;
-  margin-top: 0;
-  width: 100%;
-}
-
-#nav {
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .fundo {
   background-color: white;
-}
-@media screen and (min-width: 720px){
-  #nav {
-    display: flex;
-  }
-  .link, .link:active {
-    font-size: 1.8em;
-  }
 }
 </style>
