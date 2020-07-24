@@ -2,7 +2,7 @@
   <carousel-3d
     :height= height
     :width= width
-    :autoplay= true
+    :autoplay= autoplay
     :autoplay-timeout= "5000"
     :display= 3
     :controlsVisible="true"
@@ -38,7 +38,14 @@ export default {
     }
   },
   props: {
-    slides : Array
+    slides : {
+      type: Array,
+      required: true
+    },
+    autoplay: {
+      type: Boolean,
+      required: true
+    }
   },
   computed: {
     width: function () {

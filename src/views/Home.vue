@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <Perfil />
-    <Carousel :slides="slides" @alterarSite="alterarSite" />
+    <Carousel :slides="slides" @alterarSite="alterarSite" :autoplay=true />
     <!-- <Galeria :slide="slides[index] "/> -->
   </div>
 </template>
@@ -19,100 +19,15 @@ export default {
     // Galeria
     Perfil
   },
+  props: {
+    slides: {
+      type: Array,
+      required: true
+    }
+  },
   data() {
     return {
-      slides: [
-        {
-          titulo: "Sacada Gourmet",
-          mensagem: "Florianópolis - SC 3,0m²",
-          mainImg: require('@/assets/projeto_01/cena-02.png'),
-          imagens: [
-            {
-              endereco: require('@/assets/projeto_01/cena-02.png')
-            },
-            {
-              endereco: require('@/assets/projeto_01/cena-03.png')
-            },
-            {
-              endereco: require('@/assets/projeto_01/cena-04.png')
-            }
-          ]
-        },
-        {
-          titulo: "Suíte Casal MC",
-          mensagem: "Palhoça - SC 12,0m²",
-          mainImg: require('@/assets/projeto_02/suite-00.png'),
-          imagens: [
-            {
-              endereco: require('@/assets/projeto_02/suite-00.png')
-            },
-            {
-              endereco: require('@/assets/projeto_02/suite-01.png')
-            },
-            {
-              endereco: require('@/assets/projeto_02/suite-02.png')
-            },
-            {
-              endereco: require('@/assets/projeto_02/suite-03.png')
-            },
-            {
-              endereco: require('@/assets/projeto_02/suite-04.png')
-            }
-          ]
-        },
-        {
-          titulo: "Living NR",
-          mensagem: "Bela Vista - SC 10,0m²",
-          mainImg: require('@/assets/projeto_03/cena-01.png'),
-          imagens: [
-            {
-              endereco: require('@/assets/projeto_03/cena-01.png')
-            },
-            {
-              endereco: require('@/assets/projeto_03/cena-02.png')
-            },
-            {
-              endereco: require('@/assets/projeto_03/cena-04.png')
-            },
-            {
-              endereco: require('@/assets/projeto_03/cena-06.png')
-            },
-            {
-              endereco: require('@/assets/projeto_03/cena-07.png')
-            }
-          ]
-        },
-        {
-          titulo: "Suíte NR",
-          mensagem: "Bela Vista - SC 10,0m²",
-          mainImg: require('@/assets/projeto_04/imagem-01.png'),
-          imagens: [
-            {
-              endereco: require('@/assets/projeto_04/imagem-01.png')
-            },
-            {
-              endereco: require('@/assets/projeto_04/imagem-02.png')
-            },
-            {
-              endereco: require('@/assets/projeto_04/imagem-03.png')
-            },
-            {
-              endereco: require('@/assets/projeto_04/imagem-04.png')
-            },
-            {
-              endereco: require('@/assets/projeto_04/imagem-05.png')
-            },
-            {
-              endereco: require('@/assets/projeto_04/imagem-06.png')
-            },
-            {
-              endereco: require('@/assets/projeto_04/imagem-07.png')
-            }
-          ]
-        }
-      ],
       index:0
-      
     };
   },
   methods: {

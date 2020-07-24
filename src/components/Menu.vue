@@ -1,9 +1,9 @@
 <template>
     <div class="menu">
-        <router-link class="link" to="/">incio</router-link>
+        <router-link class="link" to="/">início</router-link>
         <router-link class="link" to="/projetos">projetos</router-link>
         <router-link class="link" to="/clientes">clientes</router-link>
-        <router-link class="link" to="/contato">contato</router-link>
+        <!-- <router-link class="link" to="/contato">contato</router-link> -->
       </div>
 </template>
 
@@ -38,7 +38,7 @@ export default {
 
 @media screen and (min-width: 720px){
   .link, .link:active {
-    font-size: 1.8em;
+    font-size: 1.6em;
   }
 }
 </style>

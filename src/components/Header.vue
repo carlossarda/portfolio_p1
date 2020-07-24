@@ -1,8 +1,8 @@
 <template>
     <div id="nav">
-        <a href="/">
+        <router-link to="/">
             <img :src="header">
-        </a>
+        </router-link>
         <Menu />
     </div>
 </template>
