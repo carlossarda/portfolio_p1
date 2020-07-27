@@ -2,7 +2,7 @@
     <div class="menu">
         <router-link class="link" to="/">início</router-link>
         <router-link class="link" to="/projetos">projetos</router-link>
-        <router-link class="link" to="/clientes">clientes</router-link>
+        <!-- <router-link class="link" to="/clientes">clientes</router-link> -->
         <!-- <router-link class="link" to="/contato">contato</router-link> -->
       </div>
 </template>

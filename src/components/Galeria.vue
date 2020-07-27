@@ -5,16 +5,35 @@
             <p>{{slide.mensagem}}</p>
         </div>
         <div class="imagens">
-            <img class="imagem" v-for="(image,i) in slide.imagens" :src="image.endereco" v-bind:key="i" />
+            <img @click="toogleModal(i)" class="imagem" v-for="(image,i) in slide.imagens" :src="image.endereco" v-bind:key="i" />
         </div>
+        <Modal v-if="showModal" @close="toogleModal">
+            <img slot="body" class="imagem-modal" :src="slide.imagens[index].endereco">
+        </Modal>
     </section>
 </template>
 
 <script>
+import Modal from './Modal';
 
 export default {
-    props:{
+    props: {
         slide: Object
+    },
+    components: {
+        Modal
+    },
+    data: () => {
+        return {
+            showModal: false,
+            index: 0
+        }
+    },
+    methods: {
+        toogleModal(i = 0) {
+            this.index = i;
+            this.showModal = !this.showModal;
+        }
     }
 }
 </script>
@@ -23,6 +42,11 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 .descricao {
     text-align: center;
+}
+
+.imagem-modal {
+    width: 80vw;
+    
 }
 
 .descricao p {
@@ -52,13 +76,17 @@ img{
         margin: 25px;
     }
 
+    .imagem-modal {
+        height: 95vh;
+    }
+
     .imagem{
         margin: 10px;
     }
 
     img{
-        width: 25vw;
-        height: 25vh;
+        width: 350px;
+        height: 230px;
     }
 }
     
